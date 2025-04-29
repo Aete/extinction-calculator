@@ -1,54 +1,20 @@
-# React + TypeScript + Vite
+# Local Extinction Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Background
 
-Currently, two official plugins are available:
+대한민국은 지속적인 저출생, 인구감소, 수도권 집중화 등으로 인해 지방도시들의 소멸 위기가 점차 심화되고 있다.
+이 프로젝트는 국가 통계와 미래 인구 구조 변화를 활용하여 직관적으로 미래의 지방도시들이 겪게될 과제들을 직관적으로 제시하고자 한다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+South Korea is facing an accelerating risk of local city extinction due to persistently low birth rates, population decline, and ongoing social and economic concentration in the Seoul metropolitan area. This project uses national statistics and projected changes in future population structure to intuitively highlight the challenges that local cities will have to solve.
 
-## Expanding the ESLint configuration
+### Research questions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+프로젝트는 다음과 같은 질문들에 대한 답을 데이터 시각화를 통해 풀어내고자 한다.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 현재 지방도시의 경제, 산업구조가 지속된다고 했을 때, 인구 감소에 따른 미래 지방도시의 예산은 얼마나 줄어드는가?
+- 지금과 같은 지방세를 걷기 위해서는 1인당 생산량이 얼마나 늘어나야 하는가?
+- 인구 감소에 따른 중앙정부 지원은 얼마나 더 필요한가? 이를 뒷받침하기 위해서는 1인당 생산량이 얼마나 늘어나야 하는가?
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Assuming the current economic and industrial structures remain unchanged, how much will local municipal budgets shrink due to population decline?
+- How much must GDP per capita increase to maintain the current level of local tax revenues?
+- What additional central government support is required to cover fiscal shortfalls caused by population decline, and by how much must GDP per capita rise to offset this shortfall?
