@@ -15,6 +15,8 @@ South Korea is facing an accelerating risk of local city extinction due to persi
 - 지금과 같은 지방세를 걷기 위해서는 1인당 생산량이 얼마나 늘어나야 하는가?
 - 인구 감소에 따른 중앙정부 지원은 얼마나 더 필요한가? 이를 뒷받침하기 위해서는 1인당 생산량이 얼마나 늘어나야 하는가?
 
+This project aims to address the following questions through data visualization.
+
 - Assuming the current economic and industrial structures remain unchanged, how much will local municipal budgets shrink due to population decline?
 - How much must GDP per capita increase to maintain the current level of local tax revenues?
 - What additional central government support is required to cover fiscal shortfalls caused by population decline, and by how much must GDP per capita rise to offset this shortfall?
