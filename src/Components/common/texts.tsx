@@ -7,12 +7,13 @@ type DescriptionProps = {
 export const Description = styled.p<DescriptionProps>`
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
-  color: #2979ff;
+  color: #263238;
   font-weight: 300;
   width: 100%;
   line-height: 1.8;
   margin-bottom: ${(props) => (props.$isLast ? "40px" : "10px")};
   margin-left: 4px;
+  word-spacing: -2px;
 `;
 
 export const DescriptionBold = styled.span`
@@ -22,7 +23,7 @@ export const DescriptionBold = styled.span`
 
 export const DescriptionKR = styled.p<DescriptionProps>`
   font-size: 20px;
-  color: #2979ff;
+  color: #263238;
   font-weight: 300;
   width: 100%;
   line-height: 1.8;
@@ -30,4 +31,5 @@ export const DescriptionKR = styled.p<DescriptionProps>`
   font-family: "Noto Sans KR", sans-serif;
   margin-bottom: ${(props) => (props.$isLast ? "40px" : "10px")};
   margin-left: 4px;
+  word-spacing: 4px;
 `;

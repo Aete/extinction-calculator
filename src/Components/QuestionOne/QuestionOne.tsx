@@ -14,7 +14,9 @@ const QuestionOneContainer = styled.div`
 export default function QuestionOne() {
   return (
     <QuestionOneContainer>
-      <ChapterTitle>Local Tax Revenues</ChapterTitle>
+      <ChapterTitle style={{ wordSpacing: -20 }}>
+        Local Tax Revenues
+      </ChapterTitle>
       <Description $isLast={false}>
         I assume that the local tax revenue of each local government is
         perfectly proportional to the number of people in the working-age
