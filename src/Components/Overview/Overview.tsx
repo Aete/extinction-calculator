@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { ChapterTitle } from "../common/titles";
 import { Description, DescriptionBold, DescriptionKR } from "../common/texts";
 
+import { useEffect, useRef, useState } from "react";
+import PopulationChart from "./PopulationChart";
+
 const OverviewContainer = styled.div`
   width: 100%;
   display: flex;
@@ -11,7 +14,25 @@ const OverviewContainer = styled.div`
   justify-content: center;
 `;
 
+const PopulationChartContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export default function Overview() {
+  const [chart, setChart] = useState<PopulationChart | null>(null);
+  const chartRef = useRef(null);
+  const hasRendered = useRef(false);
+
+  useEffect(() => {
+    if (!chart && chartRef.current && !hasRendered.current) {
+      setChart(new PopulationChart(chartRef.current));
+      hasRendered.current = true;
+    } else {
+    }
+  }, [chart]);
   return (
     <OverviewContainer>
       <ChapterTitle>Overview</ChapterTitle>
@@ -34,6 +55,7 @@ export default function Overview() {
         이 프로젝트는 국가 통계와 미래 인구 구조 변화를 활용하여 직관적으로
         미래의 지방도시들이 겪게될 과제들을 직관적으로 제시하고자 한다.
       </DescriptionKR>
+      <PopulationChartContainer ref={chartRef} />
     </OverviewContainer>
   );
 }
