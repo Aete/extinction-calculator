@@ -4,6 +4,7 @@ import { Provider } from "jotai";
 import { GlobalStyle } from "./style/GlobalStyle";
 import Landing from "./Components/Landing/Landing";
 import Overview from "./Components/Overview/Overview";
+import QuestionOne from "./Components/QuestionOne/QuestionOne";
 
 const AppContainer = styled.div`
   width: 1280px;
@@ -22,6 +23,7 @@ function App() {
       <AppContainer>
         <Landing />
         <Overview />
+        <QuestionOne />
       </AppContainer>
     </Provider>
   );

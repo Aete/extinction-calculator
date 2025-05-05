@@ -30,8 +30,14 @@ const TitleFont = styled.h1`
   width: 100%;
 `;
 
+const TitleOutline = styled.span`
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #2979ff;
+`;
+
 const SubtitleFont = styled.p`
-  font-family: "Roboto Mono", monospace;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
   color: #2979ff;
   font-weight: 300;
@@ -48,9 +54,11 @@ export default function Landing() {
   return (
     <LandingContainer>
       <TextContainer>
-        <TitleFont>Local Extinction Calculator</TitleFont>
+        <TitleFont>
+          Local <TitleOutline>Extinction</TitleOutline> Calculator
+        </TitleFont>
         <SubtitleFont>
-          Data Visualization of the local extinction risk of South Korean cities
+          도시소멸 계산기: 사라지는 도시들을 위한 데이터 시각화
         </SubtitleFont>
       </TextContainer>
     </LandingContainer>

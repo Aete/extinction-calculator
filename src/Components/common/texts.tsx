@@ -1,17 +1,33 @@
 import styled from "styled-components";
 
-export const Description = styled.p`
+type DescriptionProps = {
+  $isLast?: boolean;
+};
+
+export const Description = styled.p<DescriptionProps>`
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   color: #2979ff;
   font-weight: 300;
-  margin: 0;
-  padding: 0;
   width: 100%;
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: ${(props) => (props.$isLast ? "40px" : "10px")};
+  margin-left: 4px;
 `;
 
 export const DescriptionBold = styled.span`
   font-weight: 500;
+  color: #2979ff;
+`;
+
+export const DescriptionKR = styled.p<DescriptionProps>`
+  font-size: 20px;
+  color: #2979ff;
+  font-weight: 300;
+  width: 100%;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-bottom: ${(props) => (props.$isLast ? "40px" : "10px")};
+  margin-left: 4px;
 `;
